@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    <!-- Définir l'encodage des caractères sur UTF-8 -->
     <meta charset="UTF-8">
+    
+    <!-- Rendre la page Web réactive aux différents appareils -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Définir le titre du document -->
     <title>Document</title>
 </head>
 <body>
+    <!-- Conteneur des boutons de couleur -->
     <div class="botoesCores">
-        <label for="cor" class="margem">Cor:</label>
+        <!-- Libellé de la sélection de couleur -->
+        <label for="cor" class="margem">Couleur :</label>
+        
+        <!-- Boutons de couleur -->
         <button class="rosa" id="rosa"></button>
         <button class="azul" id="azul"></button>
         <button class="laranja" id="laranja"></button>
         <button class="amarelo" id="amarelo"></button>
         <button class="roxo" id="roxo"></button>
     </div>
+    
+    <!-- Script JavaScript -->
     <script>
+        // Sélectionner tous les boutons de couleur
         var botoesCores = document.querySelectorAll('.botoesCores button');
     
+        // Fonction pour gérer la sélection de couleur
         function selecionarCor(corSelecionada) {
-            console.log("Usuário selecionou a cor:", corSelecionada);
-            // Aqui você pode realizar outras ações com a cor selecionada, como aplicá-la a um card.
+            // Afficher la couleur sélectionnée dans la console
+            console.log("L'utilisateur a sélectionné la couleur :", corSelecionada);
+            
+            // Ici, vous pouvez effectuer d'autres actions avec la couleur sélectionnée, comme l'appliquer à une carte.
         }
     
-        // Adicionando ouvintes de eventos a cada botão
+        // Ajouter des écouteurs d'événements à chaque bouton
         botoesCores.forEach(function(botao) {
             botao.addEventListener('click', function() {
+                // Obtenir l'identifiant (couleur) du bouton cliqué
                 var corSelecionada = botao.id;
+                
+                // Appeler la fonction pour gérer la sélection de couleur
                 selecionarCor(corSelecionada);
             });
         });
